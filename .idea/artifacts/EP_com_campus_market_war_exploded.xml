@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="EP.com.campus-market:war exploded">
+    <output-path>$PROJECT_DIR$/EP.com.campus-market/target/EP.com.campus-market</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>EP.com.campus-market</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="campusmarket" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/campusmarket/target/EP.com.campus-market/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="campusmarket/web/Web" />
+    </root>
+  </artifact>
+</component>
