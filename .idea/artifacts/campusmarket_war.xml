@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="campusmarket:war">
+    <output-path>$PROJECT_DIR$/campusmarket/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>campusmarket</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="EP.com.campus-market-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="campusmarket:war exploded" />
+    </root>
+  </artifact>
+</component>
