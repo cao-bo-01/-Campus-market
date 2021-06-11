@@ -3,18 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-        <environments default="xiaoyuanjie">
-            <environment id="xiaoyuanjie">
-                <transactionManager type="JDBC"></transactionManager>
-                <dataSource type="POOLED">
-                    <property name="driver"     value="com.mysql.jdbc.Driver"/>
-                    <property name="url"        value="jdbc:mysql://localhost:3306/onlinevideo"/>
-                    <property name="username"   value="root"/>
-                    <property name="password"   value="root"/>
-                </dataSource>
-            </environment>
-        </environments>
+    <environments default="xxx">
+        <environment id="xxx">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
 
-    <mappers></mappers>
+    </environments>
 
+
+    <mappers>
+        <mapper  resource="mappers/mapper.xml" />
+    </mappers>
 </configuration>
