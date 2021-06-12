@@ -4,12 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <environments default="xxx">
-        <environment id="xxx">
+    <environments default="market">
+        <environment id="market">
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
                 <property name="username" value="root"/>
                 <property name="password" value="root"/>
             </dataSource>
@@ -19,7 +19,8 @@
 
 
     <mappers>
-        <mapper resource="member.xml"/>
+        <mapper resource="mapper/userMapper.xml"/>
+<!--        <mapper resource="mapper/member.xml"/>-->
     </mappers>
 
 </configuration>

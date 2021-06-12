@@ -26,12 +26,12 @@
       <scope>test</scope>
     </dependency>
 
+<!--  操作数据库 的包 mybatis  -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.5.4</version>
     </dependency>
-
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>

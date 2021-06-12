@@ -1,6 +1,7 @@
 package dao;
 
 import domain.Member;
+import domain.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -20,6 +21,23 @@ public class MemberDao {
 
         SqlSession session =  factory.openSession(true);
 
-        session.insert("insert");
+        System.out.println(session == null);
+                session.insert("insert");
+    }
+
+
+
+    public void addUser(User user){
+
+
+        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+
+        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.xml");
+
+        SqlSessionFactory factory = builder.build(inputStream);
+
+        SqlSession session =  factory.openSession(true);
+
+        session.insert("addUser");
     }
 }
