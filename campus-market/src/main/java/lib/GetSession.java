@@ -14,29 +14,20 @@ public class GetSession {
 
     static {
         if (session == null) {
-//            synchronized (SqlSession.class) {
-            System.out.println((session == null )+"工厂 静态块"+"                1");
+            synchronized (SqlSession.class) {
                 if (session == null) {
                     SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-
                     InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.xml");
-
                     SqlSessionFactory factory = builder.build(inputStream);
-
                     session = factory.openSession(true);
-
                 }
-//            }
-            System.out.println((session == null )+"工厂 静态块"+"                2");
+            }
         }
 
     }
 
     public static SqlSession getSqlSession() {
-        System.out.println((session == null )+"工厂 get方法"+"                1");
         return session;
     }
-
-
 
 }

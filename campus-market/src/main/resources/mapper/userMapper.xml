@@ -4,6 +4,8 @@
 <!-- user -->
 <mapper namespace="dao.MemberDao">
 
+
+
     <insert id="addUser">
         INSERT INTO user VALUES ('nihao',12,3)
     </insert>
