@@ -3,9 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dao.InsertDao">
+<mapper namespace="dao.MemberDao">
 
-    <insert id="insertOne">
-        insert into t value ('sadf');
+
+    <insert id="insert" >
+        insert into member values ('b','b','b','b','a');
     </insert>
 </mapper>
