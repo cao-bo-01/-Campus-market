@@ -32,5 +32,17 @@ public class MemberDao {
         SqlSession session = GetSession.getSqlSession();
 
         session.insert("addUser");
+
+    }
+
+
+
+
+    //    工厂操作
+    public void findUserAll(){
+        SqlSession session = GetSession.getSqlSession();
+
+        session.selectList("findUserAll");
+
     }
 }
