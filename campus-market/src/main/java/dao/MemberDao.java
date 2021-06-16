@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
+import java.util.List;
 
 public class MemberDao {
 
@@ -22,10 +23,24 @@ public class MemberDao {
         SqlSession session =  factory.openSession(true);
 
         System.out.println(session == null);
-                session.insert("insert");
-
+          List<User> list =   session.selectList("findUserAll");
+        System.out.println(list.size());
     }
 
+
+    public static void main(String[] args) {
+        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+
+        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.xml");
+
+        SqlSessionFactory factory = builder.build(inputStream);
+
+        SqlSession session =  factory.openSession(true);
+
+        System.out.println(session == null);
+        List<User> list =   session.selectList("findUserAll");
+        System.out.println(list.size());
+    }
 
 //    工厂操作
     public void addUser(User user){
