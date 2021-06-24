@@ -1,11 +1,14 @@
 package dao;
 
-import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserDao {
 
-   static SqlSession sqlSession = lib.GetSession.getSqlSession();
 
+    public void add() {
+        System.out.println("service + good! ");
+    }
 
 
 }

@@ -26,7 +26,7 @@
       <scope>test</scope>
     </dependency>
 
-<!--  操作数据库 的包 mybatis  -->
+<!--  操作数据库 的包 mybatis                                       mybatis   开始                            -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
@@ -38,9 +38,13 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.47</version>
     </dependency>
+    <!--  操作数据库 的包 mybatis                                       mybatis   开始                            -->
 
 
 
+
+
+    <!--        spring                                            开始                 -->
     <!--spring整合单元测试-->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -79,8 +83,6 @@
       <version>5.2.6.RELEASE</version>
     </dependency>
 
-
-    <!--        springmvc-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
@@ -92,8 +94,7 @@
       <artifactId>spring-webmvc</artifactId>
       <version>5.2.5.RELEASE</version>
     </dependency>
-
-
+    <!--        spring                                            结束                 -->
 
 
 
